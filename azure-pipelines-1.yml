@@ -9,8 +9,6 @@ trigger:
 pool:
  snowmachine
 
-variables:
-- group: AzuregitVARS
 steps:
 # for Windows PowerShell
 
