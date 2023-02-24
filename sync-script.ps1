@@ -8,7 +8,8 @@ $stageDir = '$(Build.SourcesDirectory)' | Split-Path
 $githubDir = $stageDir +"\"+"gitHub"
 $destination = $githubDir +"\"+"flatriss.git"
 #please provide your username
-$alias = 'snowwhite686:'+ "$($env:Github.PAT)"
+#$alias = 'snowwhite686:'+ "$($env:Github.PAT)"
+$alias = 'snowwhite686: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'
 $azurepat = "$($env:AzureDevOps.PAT)"
 #Please make sure, you remove https from azure-repo-clone-url
 $sourceURL = 'https://icloud9@dev.azure.com/icloud9/Features%20Rich%20Epics%20Team/_git/flatriss.git'
