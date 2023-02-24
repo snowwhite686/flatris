@@ -12,15 +12,6 @@ pool:
 variables:
 - group: AzuregitVARS
 steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '10.x'
-  displayName: 'Install Node.js'
-
-- script: |
-    npm run build
-  displayName: 'npm build'
-
 # for Windows PowerShell
 
 - powershell: .\sync-script.ps1
