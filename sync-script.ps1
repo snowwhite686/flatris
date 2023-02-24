@@ -1,4 +1,5 @@
 # Write your PowerShell commands here.
+$env = AzuregitVARS
 Write-Host ' - - - - - - - - - - - - - - - - - - - - - - - - -'
 Write-Host ' reflect Azure Devops repo changes to GitHub repo'
 Write-Host ' - - - - - - - - - - - - - - - - - - - - - - - - - '
