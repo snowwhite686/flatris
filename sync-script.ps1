@@ -4,13 +4,14 @@
 Write-Host ' - - - - - - - - - - - - - - - - - - - - - - - - -'
 Write-Host ' reflect Azure Devops repo changes to GitHub repo'
 Write-Host ' - - - - - - - - - - - - - - - - - - - - - - - - - '
-$stageDir = '$(Build.SourcesDirectory)' | Split-Path
+$stageDir = '$($env:Build.SourcesDirectory)' | Split-Path
 $githubDir = $stageDir +"\"+"gitHub"
 $destination = $githubDir +"\"+"flatris.git"
 #please provide your username
 $alias = 'snowwhite686:'+ "$($env:Github.PAT)"
+$azurepat = "$($env:AzureDevOps.PAT)"
 #Please make sure, you remove https from azure-repo-clone-url
-$sourceURL = 'https://$($env:AzureDevOps.PAT)@neetha/icloud9/Features%20Rich%20Epics%20Team/_git/flatriss.git'
+$sourceURL = 'https://+'$azurepat'+'@icloud9/Features%20Rich%20Epics%20Team/_git/flatriss.git'
 #Please make sure, you remove https from github-repo-clone-url
 $destURL = 'https://' + $alias + '@snowwhite686/flatrissbck.git'
 #Check if the parent directory exists and delete
