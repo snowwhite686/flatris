@@ -4,10 +4,9 @@
 Write-Host ' - - - - - - - - - - - - - - - - - - - - - - - - -'
 Write-Host 'reflect Azure Devops repo changes to GitHub repo'
 Write-Host ' - - - - - - - - - - - - - - - - - - - - - - - - - '
-Write-Host '$(Build.SourcesDirectory)'
-$stageDir = '$($env:Build.SourcesDirectory)' | Split-Path
+$stageDir = '$(Build.SourcesDirectory)' | Split-Path
 $githubDir = $stageDir +"\"+"gitHub"
-$destination = $githubDir +"\"+"flatris.git"
+$destination = $githubDir +"\"+"flatriss.git"
 #please provide your username
 $alias = 'snowwhite686:'+ "$($env:Github.PAT)"
 $azurepat = "$($env:AzureDevOps.PAT)"
