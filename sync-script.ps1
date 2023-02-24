@@ -2,8 +2,9 @@
 #$($env:AzureDevOps.PAT)
 
 Write-Host ' - - - - - - - - - - - - - - - - - - - - - - - - -'
-Write-Host ' reflect Azure Devops repo changes to GitHub repo'
+Write-Host 'reflect Azure Devops repo changes to GitHub repo'
 Write-Host ' - - - - - - - - - - - - - - - - - - - - - - - - - '
+Write-Host $(Build.SourcesDirectory)
 $stageDir = '$($env:Build.SourcesDirectory)' | Split-Path
 $githubDir = $stageDir +"\"+"gitHub"
 $destination = $githubDir +"\"+"flatris.git"
