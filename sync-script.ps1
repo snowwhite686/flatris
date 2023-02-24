@@ -1,5 +1,7 @@
 # Write your PowerShell commands here.g 
 #$branch= [Environment]::GetEnvironmentVariable(AzureDevOps.PAT)
+$githubpat = [Environment]::GetEnvironmentVariable(Github.PAT)
+$azuredevopspat = [Environment]::GetEnvironmentVariable(AzureDevOps.PAT)
 Write-Host ' - - - - - - - - - - - - - - - - - - - - - - - - -'
 Write-Host ' reflect Azure Devops repo changes to GitHub repo'
 Write-Host ' - - - - - - - - - - - - - - - - - - - - - - - - - '
@@ -7,9 +9,9 @@ $stageDir = '$(Build.SourcesDirectory)' | Split-Path
 $githubDir = $stageDir +"\"+"gitHub"
 $destination = $githubDir +"\"+"flatris.git"
 #please provide your username
-$alias = 'snowwhite686:'+ "$(Env:Github.PAT)"
+$alias = 'snowwhite686:'+ "$githubpat"
 #Please make sure, you remove https from azure-repo-clone-url
-$sourceURL = 'https://$(Env:AzureDevOps.PAT)@http://icloud9@dev.azure.com/icloud9/Features%20Rich%20Epics%20Team/_git/flatriss.git'
+$sourceURL = 'https://$(azuredevopspat)@http://icloud9@dev.azure.com/icloud9/Features%20Rich%20Epics%20Team/_git/flatriss.git'
 #Please make sure, you remove https from github-repo-clone-url
 $destURL = 'https://' + $alias + '@http://github.com/snowwhite686/flatris.git'
 #Check if the parent directory exists and delete
