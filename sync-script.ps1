@@ -10,9 +10,9 @@ $destination = $githubDir +"\"+"flatris.git"
 #please provide your username
 $alias = 'snowwhite686:'+ "$($env:Github.PAT)"
 #Please make sure, you remove https from azure-repo-clone-url
-$sourceURL = 'https://$($env:AzureDevOps.PAT)@http://icloud9@dev.azure.com/icloud9/Features%20Rich%20Epics%20Team/_git/flatriss.git'
+$sourceURL = 'https://$($env:AzureDevOps.PAT)@neetha/icloud9/Features%20Rich%20Epics%20Team/_git/flatriss.git'
 #Please make sure, you remove https from github-repo-clone-url
-$destURL = 'https://' + $alias + '@http://github.com/snowwhite686/flatris.git'
+$destURL = 'https://' + $alias + '@snowwhite686/flatrissbck.git'
 #Check if the parent directory exists and delete
 if((Test-Path -path $githubDir))
 {
