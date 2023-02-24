@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-- snowmachine
+ snowmachine
 
 steps:
 - task: NodeTool@0
