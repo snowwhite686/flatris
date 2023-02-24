@@ -9,7 +9,7 @@ $githubDir = $stageDir +"\"+"gitHub"
 $destination = $githubDir +"\"+"flatriss.git"
 #please provide your username
 #$alias = 'snowwhite686:'+ "$($env:Github.PAT)"
-$alias = 'snowwhite686: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'
+$alias = 'snowwhite686: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'
 $azurepat = "$($env:AzureDevOps.PAT)"
 #Please make sure, you remove https from azure-repo-clone-url
 $sourceURL = 'https://icloud9@dev.azure.com/icloud9/Features%20Rich%20Epics%20Team/_git/flatriss.git'
