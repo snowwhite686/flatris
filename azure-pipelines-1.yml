@@ -9,8 +9,6 @@ trigger:
 pool:
  snowmachine
 
-name: $(BuildDefinitionName)_$(Year:yyyy).$(Month).$(DayOfMonth)$(Rev:.r)
-
 steps:
 - task: NodeTool@0
   inputs:
@@ -25,4 +23,3 @@ steps:
 # for Windows PowerShell
 
 - powershell: .\sync-script.ps1
-- pwsh: echo $(Build.BuildNumber) //output updated build number
