@@ -16,6 +16,7 @@ $sourceURL = 'https://icloud9@dev.azure.com/icloud9/Features%20Rich%20Epics%20Te
 #Please make sure, you remove https from github-repo-clone-url
 #$destURL ='https://'+ "$($env:Github.PAT)"+'@github.com/snowwhite686/flatrissbck.git'
 $destURL = 'https://' + $alias + '@github.com/snowwhite686/flatrissbck.git'
+
 #Check if the parent directory exists and delete
 if((Test-Path -path $githubDir))
 {
@@ -42,3 +43,7 @@ Write-Output '*****Git push secondary****'
 git push secondary --all
 Write-Output '**Azure Devops repo synced with Github repo**'
 Set-Location $stageDir
+if((Test-Path -path $githubDir))
+{
+ Remove-Item -Path $githubDir -Recurse -force
+}
